@@ -2,6 +2,7 @@
 package uveg.calculator;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -50,89 +51,110 @@ public class CalculatorGUI extends JFrame {
         actionButtons = new ActionButtons();
         add(calculatorPanel());
         setLocationRelativeTo(null);
+        setPreferredSize(new Dimension(500, 500));
         pack();
         setVisible(true);
+        setResizable(false);
         
         
     }
         private JPanel calculatorPanel() {
 
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(4, 4));
-
-        label = new JLabel("Not pressed nothing yet");
-        panel.add(label);
+        panel.setLayout(new BorderLayout());
         
         JTextField screen = new JTextField(20);
-        panel.add(screen);
-        
+        screen.setPreferredSize(new Dimension(200, 50));
+        panel.add(screen, BorderLayout.NORTH);
+
+        JPanel buttonPanel = new JPanel(new GridLayout(4, 4));
+
         button0 = new JButton("0");
+        button0.setPreferredSize(new Dimension(50, 50));
         button0.addActionListener(actionButtons);
-        panel.add(button0);
+        buttonPanel.add(button0);
         
-        button1 = new JButton("1");
+        panel.add(buttonPanel, BorderLayout.CENTER);
+
+      button1 = new JButton("1");
+        button1.setPreferredSize(new Dimension(50, 50));
         button1.addActionListener(actionButtons);
-        panel.add(button1);
+        buttonPanel.add(button1);
         
         button2 = new JButton("2");
-        panel.add(button2);
+        button2.setPreferredSize(new Dimension(50, 50));
         button2.addActionListener(actionButtons);
+        buttonPanel.add(button2);
         
         button3 = new JButton("3");
-        panel.add(button3);
+        button3.setPreferredSize(new Dimension(50, 50));
         button3.addActionListener(actionButtons);
+        buttonPanel.add(button3);
         
         button4 = new JButton("4");
-        panel.add(button4);
+        button4.setPreferredSize(new Dimension(50, 50));
         button4.addActionListener(actionButtons);
+        buttonPanel.add(button4);
         
         button5 = new JButton("5");
-        panel.add(button5);
+        button5.setPreferredSize(new Dimension(50, 50));
         button5.addActionListener(actionButtons);
+        buttonPanel.add(button5);
         
         button6 = new JButton("6");
-        panel.add(button6);
+        button6.setPreferredSize(new Dimension(50, 50));
         button6.addActionListener(actionButtons);
+        buttonPanel.add(button6);
         
         button7 = new JButton("7");
-        panel.add(button7);
+        button7.setPreferredSize(new Dimension(50, 50));
         button7.addActionListener(actionButtons);
+        buttonPanel.add(button7);
         
         button8 = new JButton("8");
-        panel.add(button8);
+        button8.setPreferredSize(new Dimension(50, 50));
         button8.addActionListener(actionButtons);
+        buttonPanel.add(button8);
         
         button9 = new JButton("9");
-        panel.add(button9);
+        button9.setPreferredSize(new Dimension(50, 50));
         button9.addActionListener(actionButtons);
+        buttonPanel.add(button9);
         
         addButton = new JButton("+");
-        panel.add(addButton);
+        addButton.setPreferredSize(new Dimension(50, 50));
         addButton.addActionListener(actionButtons);
+        buttonPanel.add(addButton);
         
         subtractButton = new JButton("-");
-        panel.add(subtractButton);
+        subtractButton.setPreferredSize(new Dimension(50, 50));
         subtractButton.addActionListener(actionButtons);
+        buttonPanel.add(subtractButton);
         
         multiplyButton = new JButton("x");
-        panel.add(multiplyButton);
+        multiplyButton.setPreferredSize(new Dimension(50, 50));
         multiplyButton.addActionListener(actionButtons);
+        buttonPanel.add(multiplyButton);
         
         divideButton = new JButton("/");
-        panel.add(divideButton);
+        divideButton.setPreferredSize(new Dimension(50, 50));
         divideButton.addActionListener(actionButtons);
+        buttonPanel.add(divideButton);
         
         equalsButton = new JButton("=");
-        panel.add(equalsButton);
+        equalsButton.setPreferredSize(new Dimension(50, 50));
         equalsButton.addActionListener(actionButtons);
+        buttonPanel.add(equalsButton);
         
         periodButton = new JButton(".");
-        panel.add(periodButton);
+        periodButton.setPreferredSize(new Dimension(50, 50));
         periodButton.addActionListener(actionButtons);
+        buttonPanel.add(periodButton);
         
         clearButton = new JButton("C");
-        panel.add(clearButton);
+        clearButton.setPreferredSize(new Dimension(50, 50));
         clearButton.addActionListener(actionButtons);
+        buttonPanel.add(clearButton);
 
         return panel;
     }
