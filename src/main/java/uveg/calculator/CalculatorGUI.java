@@ -74,65 +74,65 @@ public class CalculatorGUI extends JFrame {
         button1.addActionListener(actionButtons);
         panel.add(button1);
         
-//        JButton button2 = new JButton("2");
-//        panel.add(button2);
-//        button2.addActionListener(actionButtons);
-//        
-//        JButton button3 = new JButton("3");
-//        button3.setBounds(50, 50, 100, 50);
-//        button3.addActionListener(actionButtons);
-//        
-//        JButton button4 = new JButton("4");
-//        button4.setBounds(50, 50, 100, 50);
-//        button4.addActionListener(actionButtons);
-//        
-//        JButton button5 = new JButton("5");
-//        button5.setBounds(50, 50, 100, 50);
-//        button5.addActionListener(actionButtons);
-//        
-//        JButton button6 = new JButton("6");
-//        button6.setBounds(50, 50, 100, 50);
-//        button6.addActionListener(actionButtons);
-//        
-//        JButton button7 = new JButton("7");
-//        button7.setBounds(50, 50, 100, 50);
-//        button7.addActionListener(actionButtons);
-//        
-//        JButton button8 = new JButton("8");
-//        button8.setBounds(50, 50, 100, 50);
-//        button8.addActionListener(actionButtons);
-//        
-//        JButton button9 = new JButton("9");
-//        button9.setBounds(50, 50, 100, 50);
-//        button9.addActionListener(actionButtons);
-//        
-//        JButton addButton = new JButton("+");
-//        addButton.setBounds(50, 50, 100, 50);
-//        addButton.addActionListener(actionButtons);
-//        
-//        JButton subtractButton = new JButton("-");
-//        subtractButton.setBounds(50, 50, 100, 50);
-//        subtractButton.addActionListener(actionButtons);
-//        
-//        JButton multiplyButton = new JButton("x");
-//        multiplyButton.setBounds(50, 50, 100, 50);
-//        multiplyButton.addActionListener(actionButtons);
-//        
-//        JButton divideButton = new JButton("/");
-//        divideButton.setBounds(50, 50, 100, 50);
-//        divideButton.addActionListener(actionButtons);
-//        
-//        JButton equalsButton = new JButton("=");
-//        equalsButton.setBounds(50, 50, 100, 50);
-//        equalsButton.addActionListener(actionButtons);
-//        
-//        JButton periodButton = new JButton(".");
-//        periodButton.setBounds(50, 50, 100, 50);
-//        periodButton.addActionListener(actionButtons);
-//        
-//        JButton clearButton = new JButton("C");
-//        clearButton.setBounds(50, 50, 100, 50);
-//        clearButton.addActionListener(actionButtons);
+        button2 = new JButton("2");
+        panel.add(button2);
+        button2.addActionListener(actionButtons);
+        
+        button3 = new JButton("3");
+        panel.add(button3);
+        button3.addActionListener(actionButtons);
+        
+        button4 = new JButton("4");
+        panel.add(button4);
+        button4.addActionListener(actionButtons);
+        
+        button5 = new JButton("5");
+        panel.add(button5);
+        button5.addActionListener(actionButtons);
+        
+        button6 = new JButton("6");
+        panel.add(button6);
+        button6.addActionListener(actionButtons);
+        
+        button7 = new JButton("7");
+        panel.add(button7);
+        button7.addActionListener(actionButtons);
+        
+        button8 = new JButton("8");
+        panel.add(button8);
+        button8.addActionListener(actionButtons);
+        
+        button9 = new JButton("9");
+        panel.add(button9);
+        button9.addActionListener(actionButtons);
+        
+        addButton = new JButton("+");
+        panel.add(addButton);
+        addButton.addActionListener(actionButtons);
+        
+        subtractButton = new JButton("-");
+        panel.add(subtractButton);
+        subtractButton.addActionListener(actionButtons);
+        
+        multiplyButton = new JButton("x");
+        panel.add(multiplyButton);
+        multiplyButton.addActionListener(actionButtons);
+        
+        divideButton = new JButton("/");
+        panel.add(divideButton);
+        divideButton.addActionListener(actionButtons);
+        
+        equalsButton = new JButton("=");
+        panel.add(equalsButton);
+        equalsButton.addActionListener(actionButtons);
+        
+        periodButton = new JButton(".");
+        panel.add(periodButton);
+        periodButton.addActionListener(actionButtons);
+        
+        clearButton = new JButton("C");
+        panel.add(clearButton);
+        clearButton.addActionListener(actionButtons);
 
         return panel;
     }
@@ -145,8 +145,8 @@ public class CalculatorGUI extends JFrame {
               if (e.getSource() == button0) {
                   System.out.println("Clicked button 0");
                   label.setText("Button 0");
-            } if (e.getSource() == button1) {
-                System.out.println("Clicked button 1");
+            } if (e.getSource() == clearButton) {
+                System.out.println("Clicked clear button");
                 label.setText("Button ");
             }        
         }
