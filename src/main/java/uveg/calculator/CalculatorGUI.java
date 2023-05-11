@@ -292,7 +292,6 @@ public class CalculatorGUI extends JFrame {
                     } else {
                         screen.setText("Error");
                         result = 0;
-//                        operator = "";
                         button0.setEnabled(false);
                         button1.setEnabled(false);
                         button2.setEnabled(false);
