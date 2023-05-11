@@ -6,4 +6,4 @@ It supports the basic operations (sum, subtraction, multiplication, and division
 
 To start the project, you can use an IDE such as NetBeans or VSCode with the required dependencies installed. Simply clone this repo and run the project.
 
-There are som edge cases that have not been handled yet, and some refactorng is needed. Feel free to fork the repo and mabe even create a pull request!
+There are some edge cases that have not been handled yet, and some refactorng is needed. Feel free to fork the repo and mabe even create a pull request!
