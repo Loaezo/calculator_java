@@ -8,16 +8,12 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 /**
  *
@@ -43,7 +39,6 @@ public class CalculatorGUI extends JFrame {
     private JButton equalsButton;
     private JButton periodButton;
     private JButton clearButton;
-    private JPanel panel;
     private JTextField screen;
     
     public CalculatorGUI() {
@@ -192,12 +187,13 @@ public class CalculatorGUI extends JFrame {
             divideButton.setEnabled(true);
             equalsButton.setEnabled(true);
             periodButton.setEnabled(true);
+            
           if (e.getSource() == button0) {
               if (Integer.parseInt(screen.getText()) == 0) {
                   screen.setText("0");
-              } else {
+              } else if (screen.getText().matches("\\d+(\\.\\d+)?")){
                   input += "0";
-                  screen.setText(input);
+                  screen.setText(input);              
               }
             } else if (e.getSource() == button1) {
                   input += "1";
@@ -296,7 +292,7 @@ public class CalculatorGUI extends JFrame {
                     } else {
                         screen.setText("Error");
                         result = 0;
-
+//                        operator = "";
                         button0.setEnabled(false);
                         button1.setEnabled(false);
                         button2.setEnabled(false);
